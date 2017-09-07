@@ -1,0 +1,8 @@
+.combo-box-wrapper {
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #eeeeee;
+    border: 1px solid lightgrey;
+}

@@ -1,0 +1,27 @@
+.local-main-title {
+    display: inline-block;
+    color: #222222;
+    width:30%;
+    font-weight: bold;
+    vertical-align: top;
+
+}
+
+.local-main-content-wrapper {
+    display: inline-block;
+    width: 70%;
+}
+
+.local-main-content-title {
+    font-weight: bold;
+}
+
+.local-main-content-appendix {
+    color: lightgrey;
+    font-size: 12px;
+}
+
+.local-main-content-appendix a {
+    color : blue;
+    cursor: pointer;
+}

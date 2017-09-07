@@ -1,0 +1,23 @@
+.content-main-title {
+    display: inline-block;
+    color: #222222;
+    width:30%;
+    font-weight: bold;
+    vertical-align: top;
+
+}
+
+.content-main-content-wrapper {
+    display: inline-block;
+    width:  70%;
+}
+
+.content-main-content-title {
+    font-weight: bold;
+}
+
+
+.content-main-content-appendix {
+    color: lightgrey;
+    font-size: 12px;
+}

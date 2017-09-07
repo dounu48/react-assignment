@@ -1,0 +1,30 @@
+.privacy-main-title {
+    display: inline-block;
+    color: #222222;
+    width:30%;
+    font-weight: bold;
+    vertical-align: top;
+
+}
+
+.privacy-main-content-wrapper {
+    display: inline-block;
+    width:  70%;
+}
+
+.privacy-main-content-title {
+    font-weight: bold;
+}
+
+
+.privacy-main-content-appendix {
+    color: lightgrey;
+    font-size: 12px;
+}
+
+.privacy-main-delete-btn {
+    color: blue;
+    font-size: 14px;
+    margin: 8px 0 15px 0;
+    cursor: pointer;
+}

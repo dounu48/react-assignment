@@ -1,0 +1,27 @@
+.main-wrapper{
+    margin-top: 15px;
+}
+
+.main-side-bar {
+    float: left;
+    width: 20%;
+    display: inline-block;
+    margin-left: 150px;
+    background-color: white;
+    height: auto;
+    box-shadow: 1px 1px 3px lightgrey;
+    border-radius: 3px;
+    border-color: #eeeeee;
+}
+
+.main-preference {
+    display: inline-block;
+    background-color: white;
+    margin-left: 15px;
+    box-shadow: 1px 1px 3px lightgrey;
+    padding: 10px 0 0 15px;
+    width: 50%;
+    height: auto;
+    border-radius: 3px;
+    border-color: #eeeeee;
+}
