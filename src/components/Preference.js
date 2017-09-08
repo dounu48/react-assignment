@@ -172,7 +172,7 @@ class  Preference extends Component  {
 
   <div>
       <div className="preference-title" >
-          Edit Preferences </div>
+          Edit Preferences</div>
 
        <div className="preference-bar" />
        <div>
