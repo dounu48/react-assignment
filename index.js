@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { App, Login }  from 'containers';
-import { Bar, Home, Preference,  Authentication } from 'components';
+import App from './containers/App';
+import Login from './containers/Login';
+import Bar from './components/Bar';
+import Home from './components/Home';
+import Preference from './components/Preference';
+import Authentication from './components/Authentication';
+
 import { BrowserRouter, Link, Switch, Route, Router} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';

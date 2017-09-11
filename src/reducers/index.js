@@ -3,7 +3,10 @@ import preference from './preference';
 
 import { combineReducers } from 'redux';
 
-export default combineReducers({
+const designApp = combineReducers({
     authentication,
     preference
 });
+
+
+export default designApp;

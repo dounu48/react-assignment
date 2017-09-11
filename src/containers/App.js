@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Header , Home  } from 'components';
+import Header from '../components/Header';
+import Home from '../components/Home';
 import { connect } from 'react-redux';
-import { getStatusRequest, logoutRequest  } from 'actions/authentication';
+import { getStatusRequest, logoutRequest  } from '../actions/authentication';
 
 class App extends Component {
 

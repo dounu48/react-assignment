@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
 import { connect } from 'react-redux';
-import { preferencePostRequest , preferenceGetRequest, preferenceRemoveRequest, preferenceEditRequest  } from 'actions/preference';
+import { preferencePostRequest , preferenceGetRequest, preferenceRemoveRequest, preferenceEditRequest  } from '../actions/preference';
 import Bar from './Bar';
 import Preference from './Preference';
 

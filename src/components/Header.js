@@ -47,13 +47,16 @@ class Header extends Component {
     render() {
 
         const logInButton = (
-                <div className="header-icon-image"  onClick={this.openModal} >
-                    <FontAwesome className="fa fa-user" name="user" /></div>
+
+                <div className="header-icon-image">
+                <div className="header-login" onClick={this.openModal} >
+                    <FontAwesome className="fa fa-user" name="user" /></div> </div>
         );
 
         const logoutButton = (
-               <div className="header-icon-image"  onClick={this.props.onLogout}>
-                    <FontAwesome className="fa fa-user-times" name="user-times" /> </div>
+               <div className="header-icon-image"  >
+                <div className="header-logout" onClick={this.props.onLogout} >
+                    <FontAwesome className="fa fa-user-times"  name="user-times" /> </div> </div>
         );
         return(
 
