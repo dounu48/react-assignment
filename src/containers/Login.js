@@ -38,7 +38,7 @@ class Login extends Component {
     render() {
         return (
             <div>
-                 <Authentication mode={true}
+                 <Authentication
                                 onLogin={this.handleLogin}
                                 onModalClose={this.props.modalCloseHandler}
                                 />
