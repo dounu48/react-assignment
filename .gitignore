@@ -1,5 +1,11 @@
-# dependencies
+#dependency
 /node_modules
 
-# setting file
+#testing
+/coverage
+
+#production
+/build
+
+#setting file
 /.idea

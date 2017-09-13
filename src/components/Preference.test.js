@@ -1,5 +1,4 @@
 import Preference from './Preference';
-import Home from './Home';
 
 describe('Preference test', ()=> {
        const data = { "language": "Chinese",
@@ -7,17 +6,20 @@ describe('Preference test', ()=> {
                   "currency": "cwon",
                   "privacy": "everyone",
                   "messages" : "everyone",
-                  "content": "disable"  };
+                  "content": "disable" ,
+                  "recentlyVisited": {},
+                   "username" : "test"};
        const username = "test";
 
-       const readMockFn = sinon.stub(Home, "read").callsFake(()=> Promise.resolve({}));
-       const saveMockFn = sinon.stub(Home, "save").callsFake(()=> Promise.resolve({}));
-       const editMockFn = sinon.stub(Home, "edit").callsFake(()=> Promise.resolve({}));
-       const removeMockFn = sinon.stub(Home, "remove").callsFake(()=> Promise.resolve({}));
+       const readMockFn = sinon.stub().callsFake(()=> Promise.resolve({}));
+       const saveMockFn = sinon.stub().callsFake(()=> Promise.resolve({}));
+       const editMockFn = sinon.stub().callsFake(()=> Promise.resolve({}));
+       const removeMockFn = sinon.stub().callsFake(()=> Promise.resolve({}));
 
-       const preference = shallow(<Preference read={readMockFn} currentUser={username}
+       const preference = mount(<Preference read={readMockFn} currentUser={username}
                                                save={saveMockFn} edit={editMockFn}
                                                remove={removeMockFn} /> );
+
 
        it ('renders without pre-stored data', ()  => {
           expect(preference.find('.preference-save-btn').text()).to.equal('Save Preferences');
@@ -25,12 +27,9 @@ describe('Preference test', ()=> {
        });
 
       it ('when save button click, save function is called', ()  => {
-
-          let promise = Promise.resolve({data});
-          let saveStub = sinon.stub(Preference, "save").callsFake(()=> promise);
-
+          sinon.assert.calledOnce(readMockFn);
           preference.find('.preference-save-btn').simulate("click");
-          sinon.assert.called(saveMockFn);
+          sinon.assert.called( saveMockFn );
 
        });
 
@@ -39,6 +38,7 @@ describe('Preference test', ()=> {
           preference.setProps({
              data: data,
              isRead: true,
+             currentUser: username
           });
 
         expect(preference.find('.preference-edit-btn').text()).to.equal('Edit Preferences');
@@ -53,26 +53,8 @@ describe('Preference test', ()=> {
              isRead: true,
           });
 
-
-          let editPreferences = { "language": "Chinese",
-                                   "timezone": "cst",
-                                   "currency": "cwon",
-                                   "privacy": "everyone",
-                                   "messages" : "everyone",
-                                   "content": "enable" }
-
-          preference.setState({
-             preferences:  editPreferences
-          });
-
-          let editPromise = Promise.resolve({editPreferences});
-          let editStub = sinon.stub(Preference, "edit").callsFake(()=> editPromise);
-
           preference.find('.preference-edit-btn').simulate("click");
           sinon.assert.called(editMockFn);
-
-          let removePromise = Promise.resolve({ username});
-          let removeStub = sinon.stub(Preference, "remove").callsFake(()=> removePromise);
 
           preference.find('.preference-del-btn').simulate("click");
           sinon.assert.called(removeMockFn);

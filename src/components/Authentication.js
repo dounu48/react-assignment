@@ -46,7 +46,7 @@ class Authentication extends Component {
             <div className="login-wrapper">
                 <div className="login-text-wrapper">
                     <label className="login-title">Username</label>
-                    <input className="login-text"
+                    <input className="login-text" autoFocus
                     onChange={this.handleChange}
                     value={this.state.username}
                     name="username"
@@ -54,7 +54,7 @@ class Authentication extends Component {
                 </div>
                 <div className="login-text-wrapper">
                     <label className="login-title">Password</label>
-                    <input className="login-text"
+                    <input className="login-password"
                     onChange={this.handleChange}
                     value={this.state.password}
                     name="password"

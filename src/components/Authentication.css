@@ -18,6 +18,11 @@
 
 }
 
+.login-password {
+    display: inline-block;
+
+}
+
 .login-btn {
     border: none;
     width: 100px;

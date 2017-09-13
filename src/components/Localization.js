@@ -1,7 +1,6 @@
 import React, { Component }  from 'react';
 import './Localization.css';
 import PropTypes from 'prop-types';
-import './ComboBox.css';
 
 class Localization extends Component {
     constructor(props) {
@@ -106,7 +105,7 @@ class Localization extends Component {
 
                <div className="local-main-content-wrapper">
                     <div className="local-main-content-title" >Language </div>
-                    <select className="combo-box-wrapper" onChange={this.selectLanguage} value={  this.state.language ? this.state.language : '' } >
+                    <select className="combo-box-language" onChange={this.selectLanguage} value={  this.state.language ? this.state.language : '' } >
 
                         {this.state.languageList.map((item ) =>
                            <option key={item.key} value={item.value}>{item.name}</option>
@@ -118,13 +117,13 @@ class Localization extends Component {
                      </div>
 
                     <div className="local-main-content-title" >Time zone </div>
-                    <select className="combo-box-wrapper" onChange={this.selectTimezone} value={ this.state.timezone ? this.state.timezone : '' }>
+                    <select className="combo-box-timezone" onChange={this.selectTimezone} value={ this.state.timezone ? this.state.timezone : '' }>
                     {this.state.timezoneList.map((item ) =>
                        <option key={item.key} value={item.value} selected={item.isSelected} >{item.name}</option>
                         )} </select>
 
                     <div className="local-main-content-title" >Currency </div>
-                    <select className="combo-box-wrapper" onChange={this.selectCurrency} value={this.state.currency ? this.state.currency : '' }>
+                    <select className="combo-box-currency" onChange={this.selectCurrency} value={this.state.currency ? this.state.currency : '' }>
                     {this.state.currencyList.map((item ) =>
                         <option key={item.key} value={item.value} selected={item.isSelected} >{item.name}</option>
                         )} </select>
